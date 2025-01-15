@@ -1,0 +1,19 @@
+﻿@model BookstoreApp.Models.Book
+
+<h1>Edit Book</h1>
+<form asp-action="Edit" method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <label for="Title">Title</label>
+    <input type="text"  id="Title" name="Title" value="@Model.Title" required />
+
+    <label for="Author">Author</label>
+    <input type="text" id="Author" name="Author" value="@Model.Author" required />
+
+    <label for="Price">Price</label>
+    <input type="number" id="Price" name="Price" value="@Model.Price"  step="0.01" required />
+
+    <button type="submit">Save Changes</button>
+</form>
+  
+
